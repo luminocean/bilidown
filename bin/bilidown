@@ -7,7 +7,7 @@ var bilidown = require('../lib/bilidown');
 
 var command = require('commander');
 command
-  .version('0.1.0')
+  .version('1.0.0')
   .option('-u, --url [url]', 'The url of the video page')
   .option('-p, --path [path]', 'The path to which videos will be saved (absolute or relative). '
       +'Default to the current execution path.')

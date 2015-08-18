@@ -1,7 +1,8 @@
 {
-  "name": "bilidownjs",
+  "name": "bilidown",
   "version": "1.0.0",
   "description": "",
+  "bin":"bin/bilidown",
   "main": "lib/bilidown.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
