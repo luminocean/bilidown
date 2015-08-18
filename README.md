@@ -13,11 +13,12 @@ Usage: bilidown [options]
     -V, --version      output the version number
     -u, --url [url]    The url of the video page
     -p, --path [path]  The path to which videos will be saved (absolute or relative). Default to the current execution path.
+    -n, --nth [page_number]  The number of the subpage you want to download.(In the case where one video page has multiple subpages) Default to 1
 
 示例：
-bilidown -p videos -u http://www.bilibili.com/video/av2474781/
+bin/bilidown -p videos -n 2 -u http://www.bilibili.com/video/av2474781/
 
-> -p 参数可以使用相对于当前执行路径的相对路径，也可以直接写绝对路径
+这行命令将下载该页面的第二个视频到当前目录下的videos文件夹下
 
 ### 安装
 
