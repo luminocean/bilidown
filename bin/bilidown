@@ -1,0 +1,38 @@
+#! /usr/bin/env node
+
+/*
+ * bilidown.js的可执行文件
+ */
+var bilidown = require('../lib/bilidown');
+
+var command = require('commander');
+command
+  .version('0.1.0')
+  .option('-u, --url [url]', 'The url of the video page')
+  .option('-p, --path [path]', 'The path to which videos will be saved (absolute or relative). '
+      +'Default to the current execution path.')
+  .parse(process.argv);
+
+var pageUrl = command['url'];
+var savePathStr = command['path'];
+
+if( !pageUrl ) exitWithError('请输入页面视频url');
+
+// 保存路径默认为当前执行目录
+savePathStr = savePathStr || '.';
+
+// 调用bilidown模块下载视频
+bilidown.downloadPageVideo(pageUrl, savePathStr, function(err){
+  if(err) return console.error(err);
+
+  console.log('视频下载完成');
+});
+
+/**
+ * 错误退出函数
+ * @param  {string} msg 错误信息
+ */
+function exitWithError(msg){
+  console.error(msg);
+  process.exit(1);
+}

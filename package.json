@@ -1,0 +1,15 @@
+{
+  "name": "bilidownjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/bilidown.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "luMinO",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.8.1",
+    "download": "^4.2.0"
+  }
+}
