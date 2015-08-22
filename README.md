@@ -9,14 +9,14 @@ Usage: bilidown [options]
 
   Options:
 
-    -h, --help         output usage information
-    -V, --version      output the version number
-    -u, --url [url]    The url of the video page
-    -p, --path [path]  The path to which videos will be saved (absolute or relative). Default to the current execution path.
-    -n, --nth [page_number]  The number of the subpage you want to download.(In the case where one video page has multiple subpages) Default to 1
+    -h, --help               output usage information
+    -V, --version            output the version number
+    -u, --url [url]          The url of the video page
+    -d, --dir [directory]    The directory to which videos will be saved (absolute or relative). Default to the current execution directory.
+    -n, --nth [page_number]  The number of the subpage you want to download the video from.(In the case where one video page has multiple subpages) Default to 1
 
 示例：
-bin/bilidown -p videos -n 2 -u http://www.bilibili.com/video/av2474781/
+bin/bilidown -d videos -n 2 -u http://www.bilibili.com/video/av2474781/
 
 这行命令将下载该页面的第二个视频到当前目录下的videos文件夹下
 

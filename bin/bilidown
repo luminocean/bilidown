@@ -9,25 +9,25 @@ var command = require('commander');
 command
   .version('1.0.0')
   .option('-u, --url [url]', 'The url of the video page')
-  .option('-p, --path [path]', 'The path to which videos will be saved (absolute or relative). '
-      +'Default to the current execution path.')
-  .option('-n, --nth [page_number]', 'The number of the subpage you want to download.'
+  .option('-d, --dir [directory]', 'The directory to which videos will be saved (absolute or relative). '
+      +'Default to the current execution directory.')
+  .option('-n, --nth [page_number]', 'The number of the subpage you want to download the video from.'
     +'(In the case where one video page has multiple subpages) '
     +'Default to 1')
   .parse(process.argv);
 
 var pageUrl = command['url'];
-var savePathStr = command['path'];
+var saveDir = command['path'];
 var pageNumber = command['nth'];
 
 if( !pageUrl ) exitWithError('请输入页面视频url');
 
 // 保存路径默认为当前执行目录
-savePathStr = savePathStr || '.';
+saveDir = saveDir || '.';
 pageNumber = pageNumber || 1;
 
 // 调用bilidown模块下载视频
-bilidown.downloadPageVideo(pageUrl, pageNumber, savePathStr, function(err){
+bilidown.downloadPageVideo(pageUrl, pageNumber, saveDir, function(err){
   if(err) return console.error(err);
 
   console.log('视频下载完成');
