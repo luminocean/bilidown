@@ -7,7 +7,7 @@ var bilidown = require('../lib/bilidown');
 
 var command = require('commander');
 command
-  .version('1.2.0')
+  .version('1.2.1')
   .option('-u, --url [url]', 'The url of the video page')
   .option('-d, --dir [directory]', 'The directory to which videos will be saved (absolute or relative). '
       +'Default to the current execution directory.')
@@ -17,7 +17,7 @@ command
   .parse(process.argv);
 
 var pageUrl = command['url'];
-var saveDir = command['path'];
+var saveDir = command['dir'];
 var pageNumber = command['nth'];
 
 if( !pageUrl ) exitWithError('请输入页面视频url');
