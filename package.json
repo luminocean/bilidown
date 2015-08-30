@@ -1,6 +1,6 @@
 {
   "name": "bilidown",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "",
   "bin": "bin/bilidown",
   "main": "lib/bilidown.js",
