@@ -16,9 +16,11 @@ Usage: bilidown [options]
     -n, --nth [page_number]  The number of the subpage you want to download the video from.(In the case where one video page has multiple subpages) Default to 1
 
 示例（进入bilidown目录后）：
-bin/bilidown -d videos -n 2 -u http://www.bilibili.com/video/av2474781/
+bin/bilidown -d downloads -n 2 -u http://www.bilibili.com/video/av2474781/
 
-这行命令将下载该页面的第二个视频到当前目录下的videos文件夹下
+这行命令将下载该页面的第二个视频到当前目录下的downloads文件夹下
+
+![演示](./demo.gif)
 
 当bilidown被全局安装后（参见安装部分），可以在任意位置直接使用bilidown命令
 
